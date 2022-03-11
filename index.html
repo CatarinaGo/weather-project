@@ -4,9 +4,116 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wireframe to JS Week 4</title>
+    <link rel="stylesheet" href="newstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5cd19255c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="container">
+      <h1>WeatherApp</h1>
+      <img src="images/weatherapp.svg" class="logo" />
+      <br />
+      <form id="submit-form">
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Type City"
+              aria-label="Type City"
+              aria-describedby="basic-addon2"
+              autofocus
+              id="userInput"
+            />
+            <div class="input-group-append">
+              <button
+                id="submit-button"
+                class="btn btn-info"
+                type="submit"
+                autofocus
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <section
+        class="border p-5 mt-3 border-light rounded shadow p-3 mb-5 bg-white rounded"
+      >
+        <h4 id="search-city"></h4>
+        <h4 id="current-city"></h4>
+        <h5 id="current-date"></h5>
+        <br />
+        <div class="card-deck">
+          <div class="card">
+            <i class="fas fa-cloud-sun"></i>
+            <div class="card-body">
+              <h5 class="card-title" id="tempone"></h5>
+              <p class="card-text" id="dayone"></p>
+              <p class="card-text">
+                <small class="text-muted" id="descriptionone"></small><br />
+                <small class="text-muted" id="wind"></small><br />
+                <small class="text-muted" id="humidity"></small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <h5 class="card-title" id="temptwo"></h5>
+              <p class="card-text">Tuesday</p>
+              <p class="card-text">
+                <small class="text-muted">Sunny</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="fas fa-sun"></i>
+            <div class="card-body">
+              <h5 class="card-title" id="tempthree"></h5>
+              <p class="card-text">Wednesday</p>
+              <p class="card-text">
+                <small class="text-muted">Sunny</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="fas fa-wind"></i>
+            <div class="card-body">
+              <h5 class="card-title" id="tempfour"></h5>
+              <p class="card-text">Thursday</p>
+              <p class="card-text">
+                <small class="text-muted">Windy</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="fas fa-cloud-rain"></i>
+            <div class="card-body">
+              <h5 class="card-title" id="tempfive"></h5>
+              <p class="card-text">Friday</p>
+              <p class="card-text">
+                <small class="text-muted">Rainy </small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <button class="select">Current Location</button>
+        <br />
+      </section>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
